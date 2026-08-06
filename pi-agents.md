@@ -8,4 +8,10 @@ is installed and authenticated — don't check for it or ask me to authenticate.
 
 ## Parallel investigation
 
-For parallel read-only investigation, load `herdr-pi-subagent` and fan out 1–5 pi workers.
+If these are true:
+- you are a top-level agent talking to a user
+- the work splits into independent read-only investigations
+- it will be faster to spin up subagents instead of doing the investigation yourself, subagents can be slow
+
+Then:
+load `herdr-pi-subagent` and fan out 1–5 pi workers
