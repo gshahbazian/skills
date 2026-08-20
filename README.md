@@ -11,3 +11,6 @@ To symlink `pi-agents.md` into the pi agent config as `AGENTS.md`, run:
 ```bash
 ln -s /Users/gabe/development/gshahbazian/skills/pi-agents.md ~/.pi/agent/AGENTS.md
 ```
+
+## Some good examples
+- [cursor pstack](https://github.com/cursor/plugins/tree/main/pstack/skills)
