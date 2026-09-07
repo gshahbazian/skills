@@ -2,6 +2,30 @@
 
 Apply these when writing or editing React / JSX / TSX code.
 
+## Use logical AND for conditional JSX without a fallback
+
+When JSX should render only when a condition passes and render nothing otherwise, use `&&` instead of a
+ternary whose second branch is `null`.
+
+Prefer:
+
+```tsx
+{conversation && (
+  <OnboardingProgress progress={conversation.plan.progress} />
+)}
+```
+
+Avoid:
+
+```tsx
+{conversation ? (
+  <OnboardingProgress progress={conversation.plan.progress} />
+) : null}
+```
+
+Make the condition explicitly boolean when another falsy value, such as `0` or an empty string, could be
+rendered accidentally.
+
 ## Prefer direct layout fixes over `min-w-0`
 
 Do not add `min-w-0` to make flex or grid layouts behave. Treat it as a layout band-aid.
